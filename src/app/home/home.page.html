@@ -1,0 +1,77 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      <img height="80" src="./assets/humanizing-data.png" />
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="card-container">
+    <ion-row>
+      <ion-col size="12" class="attendance_btn">
+        <ion-button
+          *ngIf="!isLoading; else loading"
+          shape="round"
+          color="primary"
+          class="btn btn-primary"
+          [class.checkin]="checkOutDisable"
+          (click)="updateAttendance(checkOutDisable ? 'Check In' : 'Check Out', $event)"
+        >
+          {{ checkOutDisable ? 'Check In' : 'Check Out' }}
+        </ion-button>
+        <ng-template #loading>
+          <ion-button
+            shape="round"
+            color="primary"
+            [disabled]="true"
+            class="btn btn-primary btn-loading"
+          >
+            Loading..
+          </ion-button>
+        </ng-template>
+      </ion-col>
+      <ion-col size="12" class="details">
+        <p>
+          <strong>{{ today | date : "fullDate" }}</strong>
+        </p>
+        <p>Current time: {{ currentTime }}</p>
+
+        <div class="table-responsive">
+          <table class="table" *ngIf="todayLogs.length; else noLogs">
+            <thead>
+              <tr>
+                <th scope="col">Today's Log</th>
+                <th scope="col">Check-In</th>
+                <th scope="col">Check-Out</th>
+                <th scope="col">Working Time</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let date of todayLogs; index as i">
+                <td>{{ i + 1 }}</td>
+                <td>{{ date.checkin }}</td>
+                <td>{{ date.checkout }}</td>
+                <td>
+                  <span *ngIf="date.workTime.day"
+                    >{{ date.workTime.day }}day
+                  </span>
+                  <span *ngIf="date.workTime.hour"
+                    >{{ date.workTime.hour }}hr
+                  </span>
+                  <span *ngIf="date.workTime.minute"
+                    >{{ date.workTime.minute }}min
+                  </span>
+                  <span *ngIf="date.workTime.second"
+                    >{{ date.workTime.second }}sec</span
+                  >
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <ng-template #noLogs>Not checked in yet.</ng-template>
+      </ion-col>
+    </ion-row>
+  </div>
+</ion-content>

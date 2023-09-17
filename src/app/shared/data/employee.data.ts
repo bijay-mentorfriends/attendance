@@ -1,0 +1,82 @@
+export const COURSES: string[] = [
+  'Science',
+  'Computer Science',
+  'Engineering',
+  'Management',
+  'Business',
+  'Humanities',
+  'Arts',
+  'Other',
+];
+
+export const LANGUAGES: string[] = [
+  'Illustrator',
+  'Photoshop',
+  'Adobe XD',
+  'Figma',
+  'HTML/CSS',
+  'Bootstrap',
+  'Material',
+  'Tailwind',
+  'Javascript',
+  'TypeScript',
+  'ReactJs',
+  'NextJs',
+  'Angular',
+  'Vue',
+  'NodeJs',
+  'PHP',
+  'Laravel',
+  'Symfony',
+  'Yii',
+  'Python',
+  'C#',
+  'C++',
+  'Perl',
+  'Ruby',
+  'Flutter',
+  'Java',
+  'Kotlin',
+  'Asp.Net',
+  'Swift',
+  'Ruby',
+  'Rust',
+  'Perl',
+  'MongoDb',
+  'SQL',
+  'NoSQL',
+];
+
+export const LEVELS: string[] = [
+  'School',
+  'High School',
+  'Bachelor',
+  'Masters',
+  'PHD',
+  'Other',
+];
+
+export const SKILLS: any = [
+  'Design',
+  'UI / UX',
+  'Frontend Development',
+  'Web Apps',
+  'CMS',
+  'Mobile Apps',
+  'DevOps',
+  'Data Science',
+  'Quality Assurance',
+  'Data Consolidation',
+  'Database Administrator',
+  'Other'
+];
+
+export const DAYS: string[] = [
+  'Sunday',
+  'Monday',
+  'Tuesday',
+  'Wednesday',
+  'Thursday',
+  'Friday',
+  'Saturday',
+];

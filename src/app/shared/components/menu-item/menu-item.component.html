@@ -1,0 +1,20 @@
+<ul class="sub-menu" [routerLinkActive]="'active'">
+  <li
+    *ngFor="let item of items"
+    [class.has-dropdown]="!!item.children"
+    [routerLinkActive]="'is-active'"
+    [routerLinkActiveOptions]="{ exact: true }"
+  >
+    <a [routerLink]="item.path">
+      <span class="material-symbols-outlined icon_left">
+        {{ item.maticon }}
+      </span>
+      {{ item.title }}
+      <span *ngIf="item.children" class="material-symbols-outlined icon_right">
+        expand_more
+      </span>
+    </a>
+    <app-menu-item *ngIf="item.children" #menu [items]="item.children">
+    </app-menu-item>
+  </li>
+</ul>

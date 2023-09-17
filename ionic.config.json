@@ -1,0 +1,7 @@
+{
+  "name": "MentorFriends Attendance",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

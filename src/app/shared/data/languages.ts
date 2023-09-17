@@ -1,0 +1,23 @@
+
+export const LANGUAGES: any = [
+    'HTML/CSS',
+    'PHP',
+    'Bootstrap',
+    'Javascript',
+    'NodeJs',
+    'ReactJs',
+    'Angular',
+    'TypeScript',
+    'Python',
+    'C#',
+    'C++',
+    'Perl',
+    'Ruby',
+    'React Native',
+    'Laravel',
+    'Flutter',
+    'NextJs',
+    'MongoDb',
+    'MySQL',
+    'MSSQL',
+  ];
